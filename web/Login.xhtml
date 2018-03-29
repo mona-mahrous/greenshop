@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <h:head>
+        <title>GreenShope</title>
+    </h:head>
+    <h:body>
+        <ui:composition template="templates/masterLayout.xhtml">
+            <ui:define name="heading">Login Page</ui:define>
+            <ui:define name="entry">
+                <p>Please enter your Login Data</p>
+                <table>
+                    <tr>
+                        <td>Name:</td>
+                        <td><h:inputText value="#{myBean.userName}" id="name"/></td>
+                    </tr>
+                    <tr>
+                        <td>Password:</td>
+                        <td><h:inputSecret value="#{myBean.password}"/></td>
+                    </tr>
+                    <tr>
+                        <td><h:commandButton value="Login" action="Welcome" /></td>
+                        <td><h:commandButton value="+AJAX"  >
+                                <f:ajax execute="name" render="out"/>
+                            </h:commandButton></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><h:outputText id="out" value="#{myBean.greeting}"/></td>
+                    </tr>
+                </table>
+            </ui:define>
+            <ui:define name="activeTab">
+                <script type="text/javascript">
+                   document.getElementById("l").className="current_page_item";
+                </script>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>
+

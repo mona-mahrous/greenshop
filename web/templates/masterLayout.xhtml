@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+    <h:head>
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title><ui:insert name="title">GreenShope</ui:insert></title>
+
+        <link href="./style.css" rel="stylesheet" type="text/css" media="screen" />
+    </h:head>
+
+    <h:body>
+        <f:view>
+            <h:form prependId="false">
+                <div id="wrapper">
+                    <ui:include src="/pieces/Header.xhtml"/>
+                    <ui:include src="/pieces/DefaultMenu.xhtml"/>
+                    <div id="page">
+                        <div id="content">
+                            <div id="banner"><img src="images/img07.jpg" alt="" /></div>
+                            <div id="myPost" class="post">
+                                <h2 class="title"><a href="#">Greenshop</a></h2>
+                                <p class="meta"><ui:insert name="heading">Home and Garden</ui:insert></p>
+                                <div id="entry" class="entry">
+                                    <ui:insert name="entry">
+                                        <p>If you are concerned about the environment or simply want less chemicals and more natural products in your home we can help you make a difference. In the long run this can make a positive contribution to your daily life and also to others. Take a natural approach by choosing an eco-friendly lifestyle.</p>
+                                    </ui:insert>
+                                </div>
+                            </div>
+                        </div>
+                        <ui:include src="/pieces/SideBar.xhtml"/>
+                        <div style="clear: both;"/>
+                    </div>
+                </div>
+                <ui:include src="/pieces/Footer.xhtml"/>
+                <ui:insert name="activeTab"></ui:insert>
+            </h:form>
+        </f:view>
+
+    </h:body>
+
+</html>
